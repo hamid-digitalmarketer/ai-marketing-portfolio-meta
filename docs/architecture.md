@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: a60f8e46820ea466ef0868a20e79d739_0956a74cc90911f18b7f525400393706
+    ReservedCode1: Wk80AURCetrvWjnZlAEC96CYUstxFBbOxtTmT4dCNE1TJP191yksfb12tBA8hzJ7bEau2K2KL31eAdkdT9qTSZRmnoewuC6NUuNaNJC8cDSWrWTB/PYp0AOZRzm7+vZpBbCbICO/z4TYYfQ1ocQSaavUWjNG88SerZoJsHNUAlBWengY6OqYApVbaAU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: a60f8e46820ea466ef0868a20e79d739_0956a74cc90911f18b7f525400393706
+    ReservedCode2: Wk80AURCetrvWjnZlAEC96CYUstxFBbOxtTmT4dCNE1TJP191yksfb12tBA8hzJ7bEau2K2KL31eAdkdT9qTSZRmnoewuC6NUuNaNJC8cDSWrWTB/PYp0AOZRzm7+vZpBbCbICO/z4TYYfQ1ocQSaavUWjNG88SerZoJsHNUAlBWengY6OqYApVbaAU=
+---
+
 # Architecture
 
 This document explains how the portfolio is architected: the layers, the dependency rules, the data flow, and the design decisions and tradeoffs.
@@ -68,3 +79,4 @@ The `site/` directory is a minimal Astro site that renders this hub and links to
 - **Mermaid source plus PNG.** Mermaid is editable in-repo; the PNG gives a render that works anywhere without a Mermaid renderer.
 - **Astro over a heavier framework for the hub.** Static-first, zero JavaScript by default, trivially deployable — the hub is content, not an application.
 - **Light CI for the hub.** A link checker plus a site build keep the hub honest without pretending it is an application repo; full lint/test/eval CI belongs to the system repositories.
+*（内容由AI生成，仅供参考）*

@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: a60f8e46820ea466ef0868a20e79d739_f1ddb9e0c90811f196f9525400248c00
+    ReservedCode1: KIdKSZmPTdVtcPjNEsj+1QIKYUuEf0t4E9DZYBn5rO3b/NZ+fYiAuPCUsYQZFv7jPVDnxpCbJ71fQGTB6xxyWqiHEWEAg5XdYIfGXWRBiArf7MwngYcZDtO5q9BMI157MkBxV32wqz+3uXlTIiMvoyMjNMu/KuygxsM7xOfDkNceU0BmjpAJNoZhXI4=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: a60f8e46820ea466ef0868a20e79d739_f1ddb9e0c90811f196f9525400248c00
+    ReservedCode2: KIdKSZmPTdVtcPjNEsj+1QIKYUuEf0t4E9DZYBn5rO3b/NZ+fYiAuPCUsYQZFv7jPVDnxpCbJ71fQGTB6xxyWqiHEWEAg5XdYIfGXWRBiArf7MwngYcZDtO5q9BMI157MkBxV32wqz+3uXlTIiMvoyMjNMu/KuygxsM7xOfDkNceU0BmjpAJNoZhXI4=
+---
+
 # Roadmap
 
 Build order and status for the AI marketing engineering portfolio. One coherent architecture, shipped repo by repo. Ship each repository fully before starting the next — no half-finished repos.
@@ -6,9 +17,9 @@ Build order and status for the AI marketing engineering portfolio. One coherent 
 
 | Order | Repository | Phase | Status | Notes |
 |-------|-----------|-------|--------|-------|
-| 1 | ai-marketing-shared | A · Shared Foundation | **Done** · v0.1.0 | Committed locally (`1dd8024`). Schemas, tools, MCP adapter, tracing, cost, fallback, eval harness, providers, demo mode; unit suite verified locally with >90% coverage target. Remote to be created and pushed. |
-| 2 | ai-marketing-portfolio-meta | A · Shared Foundation | **In progress** | This repository — hub, standards, roadmap, architecture, case studies, diagrams, Astro site. |
-| 3 | ai-marketing-growth-os | B · Flagship | Planned | Flagship agentic marketing intelligence platform; proves the shared pattern end-to-end. |
+| 1 | ai-marketing-shared | A · Shared Foundation | **Done** · v0.1.0 | Pushed to GitHub (`1dd8024`, [hamid-digitalmarketer/ai-marketing-shared](https://github.com/hamid-digitalmarketer/ai-marketing-shared)). Schemas, tools, MCP adapter, tracing, cost, fallback, eval harness, providers, demo mode; >90% coverage. |
+| 2 | ai-marketing-portfolio-meta | A · Shared Foundation | **Done** · v0.1.0 | Pushed to GitHub (`c44497e`, [hamid-digitalmarketer/ai-marketing-portfolio-meta](https://github.com/hamid-digitalmarketer/ai-marketing-portfolio-meta)). Hub, standards, roadmap, architecture, case studies, diagrams, Astro site. |
+| 3 | ai-marketing-growth-os | B · Flagship | **Done** · v0.1.0 | Pushed to GitHub (`ba8f3e5`, [hamid-digitalmarketer/ai-marketing-growth-os](https://github.com/hamid-digitalmarketer/ai-marketing-growth-os)). 55 tests, 94.46% coverage; FastAPI backend, 4 agents, approval queue, dashboard, Docker, CI. |
 | 4 | ai-agent-testing-lab | G · Testing & Reliability | Planned | Built early (after flagship) so every later repo is evaluated from day one. |
 | 5 | ai-marketing-mix-copilot | C · Strategic | Planned | Bayesian MMM + incrementality + budget scenarios. |
 | 6 | ai-content-ops-brand-voice | D · Core Modules | Planned | Content planning → drafting → review → publish → measure. |
@@ -39,9 +50,10 @@ ai-marketing-portfolio-meta    <- documents standards, tracks roadmap, hosts cas
 
 ## Milestones
 
-- [x] **Phase A — Shared foundation** (ai-marketing-shared done; ai-marketing-portfolio-meta in progress)
-- [ ] **Phase B — Flagship** (ai-marketing-growth-os proves the pattern end-to-end)
+- [x] **Phase A — Shared foundation** (ai-marketing-shared + ai-marketing-portfolio-meta done, pushed)
+- [x] **Phase B — Flagship** (ai-marketing-growth-os done, pushed)
 - [ ] **Testing lab wired into CI** (ai-agent-testing-lab evaluates all subsequent repos)
 - [ ] **Phases C–F — Strategic, core, intelligence, governance modules**
 - [ ] **Phase G — Testing & reliability** (ai-agent-testing-lab)
 - [ ] **Phase H — Portfolio polish** (master README, personal site, demos, case studies)
+*（内容由AI生成，仅供参考）*

@@ -53,3 +53,4 @@ The package is installed via `pyproject.toml` and imported by every other reposi
 - **Default to mock.** Making the mock provider the default forces zero-API-key runnability to be the baseline, not an afterthought.
 - **Coverage is a proxy, not a goal.** The >90% target helped, but the real win was testing each module's *behavior* (permission enforcement, fallback correctness, cost accounting) rather than just line counts.
 - **Keep the hub separate from the implementation.** The shared code lives here; the standards and roadmap that describe it live in `ai-marketing-portfolio-meta`. No duplication, no drift.
+*（内容由AI生成，仅供参考）*

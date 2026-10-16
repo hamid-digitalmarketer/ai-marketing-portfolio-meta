@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: a60f8e46820ea466ef0868a20e79d739_ece38202c90811f196f9525400248c00
+    ReservedCode1: tHzqLOw91+uUukEIhZio1FIXq3IBHDRhWTa9L6Qiy63rNRZeO7LzROvjcHE0WrpLjE8+6hQyg+RPa56WwguFmNy297O9HDZuQ/sqMiYKDZPq/XwXmx3okO6SjB9MY841TbPHH0D400LtDmaqxntYDa8Anh/4EYoL9lQFXm0mO7Y92eosryC/h0Iofgs=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: a60f8e46820ea466ef0868a20e79d739_ece38202c90811f196f9525400248c00
+    ReservedCode2: tHzqLOw91+uUukEIhZio1FIXq3IBHDRhWTa9L6Qiy63rNRZeO7LzROvjcHE0WrpLjE8+6hQyg+RPa56WwguFmNy297O9HDZuQ/sqMiYKDZPq/XwXmx3okO6SjB9MY841TbPHH0D400LtDmaqxntYDa8Anh/4EYoL9lQFXm0mO7Y92eosryC/h0Iofgs=
+---
+
 # Shared Standards
 
 This document defines the shared standards for the entire AI marketing engineering portfolio. They are defined once, in [ai-marketing-shared](../../ai-marketing-shared), and reused by every repository. Consistency is a first-class requirement: same repo structure, same naming, same license (MIT), same CI, same commit style.
@@ -178,3 +189,4 @@ Every repo ships:
 8. A demo GIF or video exists.
 9. A release is tagged and the master README links to it.
 10. A case study exists in portfolio-meta.
+*（内容由AI生成，仅供参考）*
