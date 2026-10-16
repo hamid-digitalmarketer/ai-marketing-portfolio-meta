@@ -20,7 +20,7 @@ Build order and status for the AI marketing engineering portfolio. One coherent 
 | 1 | ai-marketing-shared | A · Shared Foundation | **Done** · v0.1.0 | Pushed to GitHub (`1dd8024`, [hamid-digitalmarketer/ai-marketing-shared](https://github.com/hamid-digitalmarketer/ai-marketing-shared)). Schemas, tools, MCP adapter, tracing, cost, fallback, eval harness, providers, demo mode; >90% coverage. |
 | 2 | ai-marketing-portfolio-meta | A · Shared Foundation | **Done** · v0.1.0 | Pushed to GitHub (`c44497e`, [hamid-digitalmarketer/ai-marketing-portfolio-meta](https://github.com/hamid-digitalmarketer/ai-marketing-portfolio-meta)). Hub, standards, roadmap, architecture, case studies, diagrams, Astro site. |
 | 3 | ai-marketing-growth-os | B · Flagship | **Done** · v0.1.0 | Pushed to GitHub (`ba8f3e5`, [hamid-digitalmarketer/ai-marketing-growth-os](https://github.com/hamid-digitalmarketer/ai-marketing-growth-os)). 55 tests, 94.46% coverage; FastAPI backend, 4 agents, approval queue, dashboard, Docker, CI. |
-| 4 | ai-agent-testing-lab | G · Testing & Reliability | Planned | Built early (after flagship) so every later repo is evaluated from day one. |
+| 4 | ai-agent-testing-lab | G · Testing & Reliability | **Done** · v0.1.0 | Pushed to GitHub (`e919875`, [hamid-digitalmarketer/ai-agent-testing-lab](https://github.com/hamid-digitalmarketer/ai-agent-testing-lab)). 81 tests, 98.66% coverage; harness imports shared + growth-os agents, 7 dataset suites, reporters, CI integration template; self-eval PASS. |
 | 5 | ai-marketing-mix-copilot | C · Strategic | Planned | Bayesian MMM + incrementality + budget scenarios. |
 | 6 | ai-content-ops-brand-voice | D · Core Modules | Planned | Content planning → drafting → review → publish → measure. |
 | 7 | ai-customer-journey-orchestrator | D · Core Modules | Planned | Real-time next-best-action with holdout testing. |
@@ -52,7 +52,7 @@ ai-marketing-portfolio-meta    <- documents standards, tracks roadmap, hosts cas
 
 - [x] **Phase A — Shared foundation** (ai-marketing-shared + ai-marketing-portfolio-meta done, pushed)
 - [x] **Phase B — Flagship** (ai-marketing-growth-os done, pushed)
-- [ ] **Testing lab wired into CI** (ai-agent-testing-lab evaluates all subsequent repos)
+- [x] **Testing lab built** (ai-agent-testing-lab pushed; wiring into subsequent repo CIs in progress)
 - [ ] **Phases C–F — Strategic, core, intelligence, governance modules**
 - [ ] **Phase G — Testing & reliability** (ai-agent-testing-lab)
 - [ ] **Phase H — Portfolio polish** (master README, personal site, demos, case studies)
