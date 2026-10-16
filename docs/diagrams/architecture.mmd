@@ -1,0 +1,31 @@
+flowchart TB
+    subgraph HUB["Hub · ai-marketing-portfolio-meta"]
+        META["portfolio-meta<br/>narrative · standards · roadmap<br/>case studies · site"]
+    end
+
+    subgraph FOUNDATION["Shared Foundation · ai-marketing-shared (v0.1.0)"]
+        SHARED["ai-marketing-shared<br/>schemas · tools · mcp · tracing<br/>cost · fallback · eval · providers · demo"]
+    end
+
+    subgraph SYSTEMS["System Repositories (17 total)"]
+        FLAG["ai-marketing-growth-os<br/>(flagship)"]
+        STRAT["ai-marketing-mix-copilot<br/>(strategic)"]
+        CORE["ai-content-ops-brand-voice<br/>ai-customer-journey-orchestrator<br/>ai-cro-experimentation<br/>ai-marketing-data-quality"]
+        INTEL["ai-marketing-knowledge-graph<br/>ai-competitive-intelligence<br/>ai-customer-feedback-intelligence"]
+        GOV["ai-brand-safety-compliance<br/>ai-local-geo-marketing<br/>ai-lead-scoring-alignment<br/>ai-affiliate-partnership-intelligence<br/>ai-marketing-digital-twin"]
+        LAB["ai-agent-testing-lab"]
+    end
+
+    META -.documents.-> SHARED
+    META -.documents.-> SYSTEMS
+    FLAG -->|imports| SHARED
+    STRAT -->|imports| SHARED
+    CORE -->|imports| SHARED
+    INTEL -->|imports| SHARED
+    GOV -->|imports| SHARED
+    LAB -->|imports + evaluates| SHARED
+    LAB -.evaluates in CI.-> FLAG
+    LAB -.evaluates in CI.-> STRAT
+    LAB -.evaluates in CI.-> CORE
+    LAB -.evaluates in CI.-> INTEL
+    LAB -.evaluates in CI.-> GOV

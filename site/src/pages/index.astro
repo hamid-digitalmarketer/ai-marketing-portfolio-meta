@@ -1,0 +1,122 @@
+---
+// AI Marketing Engineer — Portfolio Hub site.
+// Repository links are built from PUBLIC_GITHUB_OWNER so the same site
+// works locally and after remotes are created.
+const owner = import.meta.env.PUBLIC_GITHUB_OWNER ?? 'your-github-username';
+const repoHref = (repo) => `https://github.com/${owner}/${repo}`;
+
+const repos = [
+  { name: 'ai-marketing-portfolio-meta', phase: 'A · Shared Foundation', status: 'In progress', purpose: 'Hub: narrative, standards, roadmap, architecture, case studies, site.' },
+  { name: 'ai-marketing-shared', phase: 'A · Shared Foundation', status: 'Done · v0.1.0', purpose: 'Shared Python package: schemas, tools, MCP, tracing, cost, fallback, eval, providers.' },
+  { name: 'ai-marketing-growth-os', phase: 'B · Flagship', status: 'Planned', purpose: 'Agentic marketing intelligence platform — the virtual digital marketing department.' },
+  { name: 'ai-marketing-mix-copilot', phase: 'C · Strategic', status: 'Planned', purpose: 'Bayesian MMM + incrementality measurement + budget scenario planning.' },
+  { name: 'ai-content-ops-brand-voice', phase: 'D · Core Modules', status: 'Planned', purpose: 'Agentic content planning, drafting, review, publishing, measurement.' },
+  { name: 'ai-customer-journey-orchestrator', phase: 'D · Core Modules', status: 'Planned', purpose: 'Real-time next-best-action across email, SMS, push, ads, on-site.' },
+  { name: 'ai-cro-experimentation', phase: 'D · Core Modules', status: 'Planned', purpose: 'Agentic conversion-rate optimization and experimentation.' },
+  { name: 'ai-marketing-data-quality', phase: 'D · Core Modules', status: 'Planned', purpose: 'Agentic monitoring of marketing data pipelines.' },
+  { name: 'ai-marketing-knowledge-graph', phase: 'E · Intelligence', status: 'Planned', purpose: 'Unified marketing knowledge graph with natural-language querying.' },
+  { name: 'ai-competitive-intelligence', phase: 'E · Intelligence', status: 'Planned', purpose: 'Always-on competitive and market sensing.' },
+  { name: 'ai-customer-feedback-intelligence', phase: 'E · Intelligence', status: 'Planned', purpose: 'Voice-of-customer intelligence from reviews, surveys, tickets, social, calls.' },
+  { name: 'ai-brand-safety-compliance', phase: 'F · Governance', status: 'Planned', purpose: 'Governed review of ad copy, landing pages, creatives, influencer content.' },
+  { name: 'ai-local-geo-marketing', phase: 'F · Governance', status: 'Planned', purpose: 'Multi-location local marketing optimization.' },
+  { name: 'ai-lead-scoring-alignment', phase: 'F · Governance', status: 'Planned', purpose: 'Explainable lead scoring, routing, closed-loop revenue attribution.' },
+  { name: 'ai-affiliate-partnership-intelligence', phase: 'F · Governance', status: 'Planned', purpose: 'Discover, vet, and optimize affiliate, influencer, partner programs.' },
+  { name: 'ai-marketing-digital-twin', phase: 'F · Governance', status: 'Planned', purpose: 'Simulation sandbox for marketing scenarios before real-world execution.' },
+  { name: 'ai-agent-testing-lab', phase: 'G · Testing & Reliability', status: 'Planned', purpose: 'Reusable reliability and evaluation lab for all agents above.' },
+];
+
+const principles = [
+  'Evidence over opinion — every recommendation cites data, metric, or model output.',
+  'Tool-using agents — agents call defined functions; never hallucinate numbers.',
+  'Structured outputs — all agent outputs conform to shared Pydantic schemas.',
+  'Human-in-the-loop — no consequential action happens without approval.',
+  'Modularity — AI providers, data sources, and tools are swappable via interfaces.',
+  'Observability — every agent run is traced: inputs, tool calls, outputs, cost, latency.',
+  'Evaluation — every repo ships an eval suite with labeled datasets and pass/fail metrics.',
+  'Cost controls — rule-based demo mode and precomputed fixtures; zero API keys.',
+  'Security — no hardcoded secrets; .env.example; input validation; least-privilege tools.',
+  'Documentation — README, architecture, evaluation, and cost-control docs in every repo.',
+  'Consistency — same repo structure, naming, license (MIT), CI, and commit style.',
+  'Runnable — docker compose up works on a fresh machine in every repo.',
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Marketing Engineer — Portfolio Hub</title>
+    <meta name="description" content="A governed, evidence-driven AI marketing engineering portfolio. One coherent architecture. Seventeen production-grade repositories. Zero API keys required to run any of them." />
+    <style>
+      :root {
+        --bg: #0f1115; --fg: #e6e9ef; --muted: #9aa4b2; --accent: #4f8cff;
+        --border: #232a36; --card: #161b23; --ok: #3fb97f;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.55; }
+      .wrap { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+      header.hero { padding: 24px 0 8px; }
+      h1 { font-size: 2.1rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+      .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 20px; }
+      .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 18px 0; }
+      h2 { font-size: 1.3rem; margin: 0 0 12px; }
+      p { margin: 8px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+      th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      th { color: var(--muted); font-weight: 600; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .status { font-size: 0.8rem; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+      .s-done { background: rgba(63,185,127,0.15); color: var(--ok); }
+      .s-wip { background: rgba(79,140,255,0.15); color: var(--accent); }
+      .s-plan { background: rgba(154,164,178,0.12); color: var(--muted); }
+      ol.principles { margin: 0; padding-left: 1.3rem; }
+      ol.principles li { margin: 6px 0; }
+      footer { color: var(--muted); font-size: 0.85rem; margin-top: 30px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <h1>AI Marketing Engineer — Portfolio Hub</h1>
+        <p class="tagline">A governed, evidence-driven AI marketing engineering portfolio. One coherent architecture. Seventeen production-grade repositories. Zero API keys required to run any of them.</p>
+      </header>
+
+      <section class="card">
+        <h2>The narrative</h2>
+        <p>I am a digital marketing leader who can design, build, evaluate, and ship governed AI systems that solve real marketing problems. I understand measurement, incrementality, content, lifecycle, compliance, and data quality. I build with modern AI engineering practices: tool-using agents, MCP, structured outputs, human-in-the-loop, observability, and evaluation. I do not build demos. I build systems.</p>
+        <p>Every system in this portfolio produces <strong>evidence-backed recommendations</strong>, uses <strong>tools safely</strong>, passes <strong>meaningful evaluations</strong>, measures <strong>real outcomes</strong>, runs <strong>without cost</strong>, documents itself, and fits into <strong>one coherent architecture</strong>.</p>
+      </section>
+
+      <section class="card">
+        <h2>The 17 repositories</h2>
+        <table>
+          <thead><tr><th>Repository</th><th>Phase</th><th>Status</th><th>Purpose</th></tr></thead>
+          <tbody>
+            {repos.map((r) => (
+              <tr>
+                <td><a href={repoHref(r.name)}>{r.name}</a></td>
+                <td>{r.phase}</td>
+                <td><span class:list={['status', r.status === 'Done · v0.1.0' ? 's-done' : r.status === 'In progress' ? 's-wip' : 's-plan']}>{r.status}</span></td>
+                <td>{r.purpose}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p style="margin-top:12px;color:var(--muted)">Roadmap and status tracked in <a href="https://github.com/{owner}/ai-marketing-portfolio-meta/blob/main/docs/roadmap.md">docs/roadmap.md</a>. Set <code>PUBLIC_GITHUB_OWNER</code> at build time to link repositories under your GitHub account.</p>
+      </section>
+
+      <section class="card">
+        <h2>The 12 core principles</h2>
+        <ol class="principles">
+          {principles.map((p) => <li>{p}</li>)}
+        </ol>
+      </section>
+
+      <footer>
+        MIT License · Built with Astro · Deployable to Vercel or GitHub Pages
+      </footer>
+    </div>
+  </body>
+</html>
