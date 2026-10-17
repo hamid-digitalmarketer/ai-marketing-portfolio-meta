@@ -35,6 +35,7 @@ Build order and status for the AI marketing engineering portfolio. One coherent 
 | 16 | ai-affiliate-partnership-intelligence | F · Governance | Planned | Partner discovery, vetting, and optimization. |
 | 17 | ai-marketing-digital-twin | F · Governance | Planned | Simulation sandbox before real-world execution. |
 | 18 | Portfolio polish | H · Polish | Planned | Master README, personal site, case studies, demo videos/GIFs. |
+| 19 | ai-search-visibility-auditor | Side project · GEO | **Done** · v0.1.0 | Pushed to GitHub (`c0ef5d7`, [hamid-digitalmarketer/ai-search-visibility-auditor](https://github.com/hamid-digitalmarketer/ai-search-visibility-auditor)). Open-source GEO toolkit: AI crawler access, llms.txt, AI-citation readiness; 17 tests pass; Streamlit dashboard + CI; topics: geo, ai-search, llms-txt, seo. |
 
 ## Dependencies
 
@@ -53,6 +54,7 @@ ai-marketing-portfolio-meta    <- documents standards, tracks roadmap, hosts cas
 - [x] **Phase A — Shared foundation** (ai-marketing-shared + ai-marketing-portfolio-meta done, pushed)
 - [x] **Phase B — Flagship** (ai-marketing-growth-os done, pushed)
 - [x] **Testing lab built** (ai-agent-testing-lab pushed; wiring into subsequent repo CIs in progress)
+- [x] **GEO tool shipped** (ai-search-visibility-auditor pushed, `c0ef5d7`; open-source GEO audit toolkit with 17 passing tests)
 - [ ] **Phases C–F — Strategic, core, intelligence, governance modules**
 - [ ] **Phase G — Testing & reliability** (ai-agent-testing-lab)
 - [ ] **Phase H — Portfolio polish** (master README, personal site, demos, case studies)
